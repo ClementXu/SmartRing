@@ -1,0 +1,10 @@
+.\out\battery_level.o: battery_level.c
+.\out\battery_level.o: da14580_config.h
+.\out\battery_level.o: da14580_stack_config.h
+.\out\battery_level.o: .\..\..\..\src\plf\refip\src\driver\adc\adc.h
+.\out\battery_level.o: .\..\..\..\src\dialog\include\global_io.h
+.\out\battery_level.o: .\..\..\..\src\dialog\include\datasheet.h
+.\out\battery_level.o: .\..\..\..\src\dialog\include\global_io.h
+.\out\battery_level.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\out\battery_level.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\out\battery_level.o: battery_level.h

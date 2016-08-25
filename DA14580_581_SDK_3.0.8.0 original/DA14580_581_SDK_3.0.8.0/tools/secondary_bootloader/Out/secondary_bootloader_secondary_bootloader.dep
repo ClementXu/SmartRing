@@ -1,0 +1,290 @@
+Dependencies for Project 'secondary_bootloader', Target 'secondary_bootloader': (DO NOT MODIFY !)
+F (.\startup\startup_CMSDK_CM0.s)(0x55002D66)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" -I.\includes-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 516"--list .\out\startup_cmsdk_cm0.lst --xref -o .\out\startup_cmsdk_cm0.o --depend .\out\startup_cmsdk_cm0.d)
+F (.\startup\system_CMSDK.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\system_cmsdk.o --omf_browse .\out\system_cmsdk.crf --depend .\out\system_cmsdk.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+F (.\src\bootloader.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\bootloader.o --omf_browse .\out\bootloader.crf --depend .\out\bootloader.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (.\includes\uart_booter.h)(0x55002D66)
+I (.\includes\bootloader.h)(0x55002D66)
+I (.\includes\spi_commands.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi_flash\spi_flash.h)(0x55002D64)
+I (.\includes\uart.h)(0x55002D66)
+I (.\includes\sw_aes.h)(0x55002D66)
+I (.\includes\os_int.h)(0x55002D66)
+F (.\src\timer.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\timer.o --omf_browse .\out\timer.crf --depend .\out\timer.d)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (.\includes\timer.h)(0x55002D66)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+F (..\..\dk_apps\src\plf\refip\src\driver\spi_flash\spi_flash.c)(0x55002D64)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\spi_flash.o --omf_browse .\out\spi_flash.crf --depend .\out\spi_flash.d)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi_flash\spi_flash.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+F (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.c)(0x55002D64)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\spi.o --omf_browse .\out\spi.crf --depend .\out\spi.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+F (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.c)(0x55002D64)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\gpio.o --omf_browse .\out\gpio.crf --depend .\out\gpio.d)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+F (.\src\uart.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\uart.o --omf_browse .\out\uart.crf --depend .\out\uart.d)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (.\includes\uart.h)(0x55002D66)
+I (.\includes\timer.h)(0x55002D66)
+F (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.c)(0x55002D64)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\i2c_eeprom.o --omf_browse .\out\i2c_eeprom.crf --depend .\out\i2c_eeprom.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+F (.\src\main.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (.\includes\uart_booter.h)(0x55002D66)
+I (.\includes\bootloader.h)(0x55002D66)
+I (.\includes\spi_commands.h)(0x55002D66)
+I (.\includes\uart.h)(0x55002D66)
+F (.\src\uart_booter.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\uart_booter.o --omf_browse .\out\uart_booter.crf --depend .\out\uart_booter.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
+I (.\includes\uart_booter.h)(0x55002D66)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (.\includes\uart.h)(0x55002D66)
+F (.\src\spi_commands.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\spi_commands.o --omf_browse .\out\spi_commands.crf --depend .\out\spi_commands.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (.\includes\periph_setup.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)
+I (.\includes\spi_commands.h)(0x55002D66)
+I (..\..\dk_apps\src\plf\refip\src\driver\spi_flash\spi_flash.h)(0x55002D64)
+F (.\src\crc32.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\crc32.o --omf_browse .\out\crc32.crf --depend .\out\crc32.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
+F (.\src\sw_aes.c)(0x55002D66)(-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 -Otime --apcs=interwork -I.\includes -I..\..\dk_apps\src\dialog\include -I..\..\dk_apps\src\plf\refip\src\driver\spi -I..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom -I..\..\dk_apps\src\plf\refip\src\driver\spi_flash -I..\..\dk_apps\src\plf\refip\src\driver\gpio -I..\..\dk_apps\src\plf\refip\src\arch -I..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds -I..\..\dk_apps\src\plf\refip\src\arch\ll\rvds -I..\..\dk_apps\src\plf\refip\src\driver\reg --c99-I D:\Keil_v5\ARM\RV31\INC-I D:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516"-o .\out\sw_aes.o --omf_browse .\out\sw_aes.crf --depend .\out\sw_aes.d)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\compiler\rvds\compiler.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\plf\refip\src\arch\arch_sleep.h)(0x55002D64)
+I (..\..\dk_apps\src\plf\refip\src\arch\ll\rvds\ll.h)(0x55002D64)
+I (..\..\dk_apps\src\dialog\include\reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\_reg_intc.h)(0x55002D62)
+I (..\..\dk_apps\src\plf\refip\src\driver\reg\reg_access.h)(0x55002D64)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
+I (..\..\dk_apps\src\dialog\include\ARMCM0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cm0.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmInstr.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\core_cmFunc.h)(0x55002D62)
+I (..\..\dk_apps\src\dialog\include\system_ARMCM0.h)(0x55002D62)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
+I (.\includes\sw_aes.h)(0x55002D66)
+I (.\includes\os_int.h)(0x55002D66)
+I (.\includes\os_port.h)(0x55002D66)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
+I (D:\Keil_v5\ARM\ARMCC\include\errno.h)(0x55AEF5F2)
+F (.\includes\periph_setup.h)(0x55002D66)()
+F (.\includes\timer.h)(0x55002D66)()
+F (.\includes\uart.h)(0x55002D66)()
+F (..\..\dk_apps\src\dialog\include\datasheet.h)(0x55002D62)()
+F (..\..\dk_apps\src\dialog\include\global_io.h)(0x55002D62)()
+F (..\..\dk_apps\src\plf\refip\src\driver\spi\spi.h)(0x55002D64)()
+F (..\..\dk_apps\src\plf\refip\src\driver\spi_flash\spi_flash.h)(0x55002D64)()
+F (..\..\dk_apps\src\plf\refip\src\driver\gpio\gpio.h)(0x55002D64)()
+F (..\..\dk_apps\src\plf\refip\src\driver\i2c_eeprom\i2c_eeprom.h)(0x55002D64)()
+F (.\includes\uart_booter.h)(0x55002D66)()
+F (.\includes\bootloader.h)(0x55002D66)()
+F (.\includes\spi_commands.h)(0x55002D66)()
+F (.\includes\os_int.h)(0x55002D66)()
+F (.\includes\os_port.h)(0x55002D66)()
+F (.\includes\sw_aes.h)(0x55002D66)()

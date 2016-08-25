@@ -1,0 +1,392 @@
+/*
+ * bma250_driver.h
+ *
+ *  Created on: 2014年12月25日
+ *      Author: Jason.Lau
+ */
+
+#ifndef BMA250_DRIVER_H_
+#define BMA250_DRIVER_H_
+#include <stdbool.h>
+#include <stdint.h>
+
+typedef struct
+{
+    int16_t x;
+    int16_t y;
+    int16_t z;
+}Acc_Raw_t;
+
+
+/*
+ *
+ *      register definitions
+ *
+ */
+#define BMA250_CHIP_ID_REG                      0x00
+//#define BMA250_VERSION_REG                      0x01    // is reserved
+#define BMA250_X_AXIS_LSB_REG                   0x02
+#define BMA250_X_AXIS_MSB_REG                   0x03
+#define BMA250_Y_AXIS_LSB_REG                   0x04
+#define BMA250_Y_AXIS_MSB_REG                   0x05
+#define BMA250_Z_AXIS_LSB_REG                   0x06
+#define BMA250_Z_AXIS_MSB_REG                   0x07
+#define BMA250_TEMP_RD_REG                      0x08
+
+#define BMA250_INT_STATUS_0_REG                 0x09
+#define BMA250_INT_STATUS_1_REG                 0x0A
+#define BMA250_INT_STATUS_2_REG                 0x0B
+#define BMA250_INT_STATUS_3_REG                 0x0C
+
+
+
+#define BMA250_FIFO_STATUS_REG                  0x0E
+
+#define BMA250_PMU_RANGE_REG                    0x0F
+#define BMA250_PMU_BW_REG                       0x10
+#define BMA250_PMU_LPW_REG                      0x11
+
+
+
+
+#define BMA250_PMU_LOW_POWER_REG                0x12
+#define BMA250_ACCD_HBW_REG                     0x13
+#define BMA250_BGW_SOFTRESET_REG                0x14
+
+
+
+#define BMA250_INT_EN_0_REG                     0x16
+#define BMA250_INT_EN_1_REG                     0x17
+#define BMA250_INT_EN_2_REG                     0x18
+
+#define BMA250_INT_MAP_0_REG                 0x19
+#define BMA250_INT_MAP_1_REG                 0x1A
+#define BMA250_INT_MAP_2_REG                 0x1B
+
+
+
+#define BMA250_INT_OUT_CTRL_REG             0x20
+#define BMA250_INT_RST_LATCH_REG            0x21
+
+#define BMA250_INT_0_REG        0x22
+#define BMA250_INT_1_REG        0x23
+#define BMA250_INT_2_REG        0x24
+#define BMA250_INT_3_REG        0x25
+#define BMA250_INT_4_REG        0x26
+#define BMA250_INT_5_REG        0x27
+#define BMA250_INT_6_REG        0x28
+#define BMA250_INT_7_REG        0x29
+#define BMA250_INT_8_REG        0x2A
+#define BMA250_INT_9_REG        0x2B
+#define BMA250_INT_A_REG        0x2C
+#define BMA250_INT_B_REG        0x2D
+#define BMA250_INT_C_REG        0x2E
+#define BMA250_INT_D_REG        0x2F
+
+#define BMA250_FIFO_CONFIG_0_REG        0x30
+
+#define BMA250_TRIM_NVM_CTRL_REG        0x33
+
+#define BMA250_OFC_CTRL_REG                 0x36
+#define BMA250_OFC_SETTING_REG              0x37
+
+#define BMA250_FIFO_CONFIG_1_REG              0x3E
+#define BMA250_FIFO_DATA_REG              0x3F
+
+
+
+
+
+
+
+
+
+
+
+
+
+//#define BMA250_BW_SEL_REG                       0x10
+//#define BMA250_MODE_CTRL_REG                    0x11
+//#define BMA250_LOW_NOISE_CTRL_REG               0x12
+//#define BMA250_DATA_CTRL_REG                    0x13
+//#define BMA250_RESET_REG                        0x14
+//#define BMA250_INT_ENABLE1_REG                  0x16
+//#define BMA250_INT_ENABLE2_REG                  0x17
+//#define BMA250_INT1_PAD_SEL_REG                 0x19
+//#define BMA250_INT_DATA_SEL_REG                 0x1A
+//#define BMA250_INT2_PAD_SEL_REG                 0x1B
+//#define BMA250_INT_SRC_REG                      0x1E
+//#define BMA250_INT_SET_REG                      0x20
+//#define BMA250_INT_CTRL_REG                     0x21
+//#define BMA250_LOW_DURN_REG                     0x22
+//#define BMA250_LOW_THRES_REG                    0x23
+//#define BMA250_LOW_HIGH_HYST_REG                0x24
+//#define BMA250_HIGH_DURN_REG                    0x25
+//#define BMA250_HIGH_THRES_REG                   0x26
+//#define BMA250_SLOPE_DURN_REG                   0x27
+//#define BMA250_SLOPE_THRES_REG                  0x28
+//#define BMA250_TAP_PARAM_REG                    0x2A
+//#define BMA250_TAP_THRES_REG                    0x2B
+//#define BMA250_ORIENT_PARAM_REG                 0x2C
+//#define BMA250_THETA_BLOCK_REG                  0x2D
+//#define BMA250_THETA_FLAT_REG                   0x2E
+//#define BMA250_FLAT_HOLD_TIME_REG               0x2F
+//#define BMA250_STATUS_LOW_POWER_REG             0x31
+//#define BMA250_SELF_TEST_REG                    0x32
+//#define BMA250_EEPROM_CTRL_REG                  0x33
+//#define BMA250_SERIAL_CTRL_REG                  0x34
+//#define BMA250_CTRL_UNLOCK_REG                  0x35
+//#define BMA250_OFFSET_CTRL_REG                  0x36
+//#define BMA250_OFFSET_PARAMS_REG                0x37
+//#define BMA250_OFFSET_FILT_X_REG                0x38
+//#define BMA250_OFFSET_FILT_Y_REG                0x39
+//#define BMA250_OFFSET_FILT_Z_REG                0x3A
+//#define BMA250_OFFSET_UNFILT_X_REG              0x3B
+//#define BMA250_OFFSET_UNFILT_Y_REG              0x3C
+//#define BMA250_OFFSET_UNFILT_Z_REG              0x3D
+//#define BMA250_SPARE_0_REG                      0x3E
+//#define BMA250_SPARE_1_REG                      0x3F
+
+
+
+
+#define BMA250_ACC_X_LSB__POS           6
+#define BMA250_ACC_X_LSB__LEN           2
+#define BMA250_ACC_X_LSB__MSK           0xC0
+#define BMA250_ACC_X_LSB__REG           BMA250_X_AXIS_LSB_REG
+
+#define BMA250_ACC_X_MSB__POS           0
+#define BMA250_ACC_X_MSB__LEN           8
+#define BMA250_ACC_X_MSB__MSK           0xFF
+#define BMA250_ACC_X_MSB__REG           BMA250_X_AXIS_MSB_REG
+
+#define BMA250_ACC_Y_LSB__POS           6
+#define BMA250_ACC_Y_LSB__LEN           2
+#define BMA250_ACC_Y_LSB__MSK           0xC0
+#define BMA250_ACC_Y_LSB__REG           BMA250_Y_AXIS_LSB_REG
+
+#define BMA250_ACC_Y_MSB__POS           0
+#define BMA250_ACC_Y_MSB__LEN           8
+#define BMA250_ACC_Y_MSB__MSK           0xFF
+#define BMA250_ACC_Y_MSB__REG           BMA250_Y_AXIS_MSB_REG
+
+#define BMA250_ACC_Z_LSB__POS           6
+#define BMA250_ACC_Z_LSB__LEN           2
+#define BMA250_ACC_Z_LSB__MSK           0xC0
+#define BMA250_ACC_Z_LSB__REG           BMA250_Z_AXIS_LSB_REG
+
+#define BMA250_ACC_Z_MSB__POS           0
+#define BMA250_ACC_Z_MSB__LEN           8
+#define BMA250_ACC_Z_MSB__MSK           0xFF
+#define BMA250_ACC_Z_MSB__REG           BMA250_Z_AXIS_MSB_REG
+
+#define BMA250_RANGE_SEL__POS             0
+#define BMA250_RANGE_SEL__LEN             4
+#define BMA250_RANGE_SEL__MSK             0x0F
+#define BMA250_RANGE_SEL__REG             BMA250_RANGE_SEL_REG
+
+#define BMA250_BANDWIDTH__POS             0
+#define BMA250_BANDWIDTH__LEN             5
+#define BMA250_BANDWIDTH__MSK             0x1F
+#define BMA250_BANDWIDTH__REG             BMA250_BW_SEL_REG
+
+#define BMA250_EN_LOW_POWER__POS          6
+#define BMA250_EN_LOW_POWER__LEN          1
+#define BMA250_EN_LOW_POWER__MSK          0x40
+#define BMA250_EN_LOW_POWER__REG          BMA250_MODE_CTRL_REG
+
+#define BMA250_EN_SUSPEND__POS            7
+#define BMA250_EN_SUSPEND__LEN            1
+#define BMA250_EN_SUSPEND__MSK            0x80
+#define BMA250_EN_SUSPEND__REG            BMA250_MODE_CTRL_REG
+
+#define BMA250_GET_BITSLICE(regvar, bitname)\
+            ((regvar & bitname##__MSK) >> bitname##__POS)
+
+
+#define BMA250_SET_BITSLICE(regvar, bitname, val)\
+    ((regvar & ~bitname##__MSK) | ((val<<bitname##__POS)&bitname##__MSK))
+
+
+
+
+////////////////////////////////
+
+#define BMA250_PMU_LPW_POWER_MODE_MASK          (0xe0)
+#define BMA250_PMU_LPW_POWER_MODE_POS           (4)
+
+
+#define BMA250_INT_2_LOW_HY_POS             (0)
+#define BMA250_INT_2_LOW_MODE_POS           (2)
+#define BMA250_INT_2_HIGH_HY_POS            (6)
+
+#define BMA250_INT_2_LOW_HY_MASK             (0x03<<BMA250_INT_2_LOW_HY_POS)
+#define BMA250_INT_2_LOW_MODE_MASK           (0x01<<BMA250_INT_2_LOW_MODE_POS)
+#define BMA250_INT_2_HIGH_HY_MASK            (0x03<<BMA250_INT_2_HIGH_HY_POS)
+
+
+
+
+
+
+/* power mode settings */
+typedef enum 
+{
+		BMA250_POWER_MODE_NORMAL= 0x00 ,
+		BMA250_POWER_MODE_DEEP_SUSOEND = 0x3E ,
+		BMA250_POWER_MODE_LOW_POWER=  0x5E ,
+		BMA250_POWER_MODE_SUSPEND =    0x9E ,
+}bma250_mode;
+//#define BMA250_POWER_MODE_NORMAL            0x00
+//#define BMA250_POWER_MODE_DEEP_SUSOEND      0x3E
+//#define BMA250_POWER_MODE_LOW_POWER         0x5E
+//#define BMA250_POWER_MODE_SUSPEND           0x9E
+
+/********************************************************/
+#define BMA250_PMU_RANGE_2G                 0x03
+#define BMA250_PMU_RANGE_4G                 0x05
+#define BMA250_PMU_RANGE_8G                 0x08
+#define BMA250_PMU_RANGE_16G                0x0c
+
+#define BMA250_PMU_BW_7_81HZ                0x08
+#define BMA250_PMU_BW_15_63HZ               0x09
+#define BMA250_PMU_BW_31_25HZ               0x0A
+#define BMA250_PMU_BW_62_50HZ               0x0B
+#define BMA250_PMU_BW_125HZ                 0x0C
+#define BMA250_PMU_BW_250HZ                 0x0D
+#define BMA250_PMU_BW_500HZ                 0x0E
+#define BMA250_PMU_BW_1000HZ                0x0F
+
+
+
+#define BMA250_INT_EN_FLAT_EN               (1<<7)  // flat interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_ORIENT_EN             (1<<6)  //  orientation interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_S_TAP_EN              (1<<5)  //   single tap interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_D_TAP_EN              (1<<4)  //  double tap interrupt: ‘0’  disabled, or ‘1’   enabled
+
+#define BMA250_INT_EN_SLOPE_EN_Z            (1<<2)  // slope interrupt, z-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_SLOPE_EN_Y            (1<<1)  // slope interrupt, y-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_SLOPE_EN_X            (1<<0)  // slope interrupt, x-axis component: ‘0’  disabled, or ‘1’   enabled
+
+#define BMA250_INT_EN_INT_FWM_EN            (1<<14) //:          FIFO watermark interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_INT_FFULL_EN          (1<<13) // en:  FIFO full interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_DATA_EN               (1<<12) // data ready interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_LOW_EN                (1<<11) //:  low-g interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_HIGH_EN_Z             (1<<10) //:  high-g interrupt, z-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_HIGH_EN_Y             (1<<9 ) //:  high-g interrupt, y-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_HIGH_EN_X             (1<<8 ) //:  high-g interrupt, x-axis component: ‘0’  disabled, or ‘1’   enabled
+
+#define BMA250_INT_EN_SLO_NO_MOT_SEL        (1<<19) //:    select ‘0’  slow-motion, ‘1’   no-motion interrupt function
+#define BMA250_INT_EN_SLO_NO_MOT_EN_Z       (1<<18) //: slow/n-motion interrupt, z-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_SLO_NO_MOT_EN_Y       (1<<17) //: slow/n-motion interrupt, y-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_EN_SLO_NO_MOT_EN_X       (1<<16) //: slow/n-motion interrupt, x-axis component: ‘0’  disabled, or ‘1’   enabled
+
+
+
+
+
+
+
+#define BMA250_INT_MAP_INT1_FLAT               (1<<7)         //:   flat interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_ORIENT             (1<<6)         //:  orientation interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_S_TAP              (1<<5)         //:  single tap interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_D_TAP              (1<<4)         //double tap interrupt: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_SLO_NO_MOT         (1<<3)         //:  write ‘0’
+#define BMA250_INT_MAP_INT1_SLOPE              (1<<2)         //:          slope interrupt, z-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_HIGH               (1<<1)         //:          slope interrupt, y-axis component: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_LOW                (1<<0)         //:          slope interrupt, x-axis component: ‘0’  disabled, or ‘1’   enabled
+
+#define BMA250_INT_MAP_INT1_FFULL              (1<<10)        //:  map FIFO full interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_FWM                (1<<9)         //:  map FIFO watermark interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT1_DATA               (1<<8)         //:  map data ready interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+
+
+
+
+#define BMA250_INT_MAP_INT2_FLAT               (1<<7)        //:   map flat interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_ORIENT             (1<<6)        //:  map orientation interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_S_TAP              (1<<5)        //:  map single tap interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_D_TAP              (1<<4)        //:  map double tap interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_SLO_NO_MOT         (1<<3)        //:  map slow/no-motion interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_SLOPE              (1<<2)        //:  map slope interrupt to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_HIGH               (1<<1)        //:  map high-g to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_LOW                (1<<0)        //:  map low-g to INT2 pin: ‘0’  disabled, or ‘1’   enabled
+
+
+
+#define BMA250_INT_MAP_INT2_FFULL              (1<<8)        //:  map FIFO full interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_FWM                (1<<9)         //:  map FIFO watermark interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+#define BMA250_INT_MAP_INT2_DATA               (1<<10)         //:  map data ready interrupt to INT1 pin: ‘0’  disabled, or ‘1’   enabled
+
+
+
+
+
+
+#define BMA250_FIFO_BYPASS_MODE      (0x00)
+#define BMA250_FIFO_NORMAL_MODE      (0x01)
+#define BMA250_FIFO_STREAM_MODE      (0x02)
+
+#define BMA250_FIFO_CONFIG_MODE_POS     6
+#define BMA250_FIFO_CONFIG_MODE_MASK     0xC0
+
+#define BMA250_FIFO_STORE_XYZ       (0x00)
+#define BMA250_FIFO_STORE_X         (0x01)
+#define BMA250_FIFO_STORE_Y         (0x02)
+#define BMA250_FIFO_STORE_Z         (0x03)
+
+#define BMA250_FIFO_CONFIG_DATA_SELECT_POS     0
+#define BMA250_FIFO_CONFIG_DATA_SELECT_MASK    0x03
+/*******************************************************/
+
+
+
+
+uint8_t BMA250_GetChipID(uint8_t* id);
+uint8_t BMA250_GetTemprature(int8_t* tmp);
+uint8_t BMA250_SoftwareReset( void  );
+uint8_t BMA250_GetIntStatus(uint32_t* int_status);
+
+
+uint8_t BMA250_SetRange(uint8_t range  );
+uint8_t BMA250_SetFilterBandwidth( uint8_t bw  );
+
+//uint8_t BMA250_SetPowerMode( uint8_t mode  );
+uint8_t BMA250_SetPowerMode( bma250_mode *mode  );
+uint8_t BMA250_GetRawXYZ(int16_t* x,int16_t* y,int16_t* z);
+
+uint8_t BMA250_SetIntEnable( uint32_t enable_cfg );
+
+
+uint8_t BMA250_CfgLowHighGInterrupt(
+        uint16_t low_g_delay_time,
+        uint16_t low_g_threshold,
+        uint16_t low_g_hysteresis,
+
+        uint16_t high_g_delay_time,
+        uint16_t high_g_threshold,
+        uint16_t high_g_hysteresis,
+
+        uint8_t intrrupt_mode);
+
+uint8_t BMA250_SetIntPinOutMode(
+        bool int1_act_lvl_is_high,
+        bool int1_is_od_mode,
+        bool int2_act_lvl_is_high,
+        bool int2_is_od_mode );
+
+
+uint8_t BMA250_ReadNVM(uint8_t addr,uint8_t* data);
+uint8_t BMA250_WriteNVM(uint8_t addr,uint8_t data);
+
+uint8_t BMA250_SetFifoWatermark(uint8_t water_mark);
+uint8_t BMA250_SetFifoConfig(uint8_t mode,uint8_t select);
+uint8_t BMA250_GetFifoData( uint8_t size,uint8_t * data );
+uint8_t BMA250_GetFifoStatus( bool *isOverrun ,uint8_t* count  );
+
+void BMA250_TansferFifoDataXYZ(uint8_t* fifo_data,int16_t* x,int16_t* y,int16_t* z);
+uint8_t BMA250_SetIntPinMap(uint16_t int1func,  uint16_t int2func);
+
+
+
+#endif /* BMA250_DRIVER_H_ */

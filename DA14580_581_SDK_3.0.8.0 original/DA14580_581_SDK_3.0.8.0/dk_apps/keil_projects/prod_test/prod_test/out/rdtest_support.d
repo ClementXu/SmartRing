@@ -1,0 +1,11 @@
+.\out\rdtest_support.o: ..\..\..\src\modules\app\src\app_project\prod_test\rdtest_support.c
+.\out\rdtest_support.o: da14580_config.h
+.\out\rdtest_support.o: da14580_stack_config.h
+.\out\rdtest_support.o: ..\..\..\src\modules\app\src\app_project\prod_test\rdtest_support.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\global_io.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\datasheet.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\global_io.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\core_cm0.h
+.\out\rdtest_support.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\core_cmInstr.h
+.\out\rdtest_support.o: .\..\..\..\src\dialog\include\core_cmFunc.h
